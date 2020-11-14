@@ -124,7 +124,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('auth_mode')
                     ->defaultNull()
                     ->validate()
-                        ->ifNotInArray(array('plain', 'login', 'cram-md5', null))
+                        ->ifNotInArray(array('plain', 'login', 'cram-md5', 'ntlm', null))
                         ->thenInvalid('The %s authentication mode is not supported')
                     ->end()
                 ->end()
